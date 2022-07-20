@@ -32,11 +32,19 @@ gem 'react_on_rails', '~> 11.3', '>= 11.3.1'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'mini_racer', platforms: :ruby
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # RSpec testing framework
   gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  # Integration testing tool for rack based web applications
+  gem 'capybara', '~> 3.37', '>= 3.37.1'
+  # Run Selenium tests
+  gem 'webdrivers', '~> 5.0', require: false
 end
 
 group :development do
@@ -51,5 +59,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'mini_racer', platforms: :ruby
+
