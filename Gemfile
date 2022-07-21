@@ -35,6 +35,8 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mini_racer', platforms: :ruby
+# GraphQL Ruby
+gem 'graphql', '~> 2.0', '>= 2.0.12'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
