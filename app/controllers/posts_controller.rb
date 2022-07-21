@@ -1,8 +1,17 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
+  include PostsHelper
+
   def index
-    @posts = Post.where(user_id: current_user.id)
+    posts_view = []
+
+    posts = Post.where(user_id: current_user.id).order(created_at: :desc)
+    posts.each do |post|
+      posts_view.push(format_post_view(post))
+    end
+
+    render json: posts_view
   end
 
   def create
@@ -11,7 +20,7 @@ class PostsController < ApplicationController
 
     post.save!
 
-    render json: post
+    render json: format_post_view(post)
   end
 
   private
