@@ -6,8 +6,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(post_params)
-    post.user = current_user
+    post = current_user.posts.new(post_params)
     post.status = 'enabled'
 
     post.save!
