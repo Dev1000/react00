@@ -23,6 +23,14 @@ class PostsController < ApplicationController
     render json: format_post_view(post)
   end
 
+  # POST /post/:id
+  def update
+    post = Post.find(params[:id])
+    post.update(title: params[:title], body: params[:body])
+
+    render json: format_post_view(post)
+  end
+
   private
 
   def post_params

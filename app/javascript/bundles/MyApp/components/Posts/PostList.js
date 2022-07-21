@@ -7,7 +7,6 @@ const PostList = ({posts, activePost, updateActivePost}) => {
       <tr>
         <th>Name</th><th>Author</th><th>Tags</th>
       </tr>
-
       </thead>
       <tbody>
       {
