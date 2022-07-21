@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
+  post '/posts', to: 'posts#create'
+  get 'posts/index'
+
   get 'users/dashboard'
   devise_for :users
   get 'hello_world', to: 'hello_world#index'
