@@ -47,6 +47,8 @@ group :development, :test do
   gem 'capybara', '~> 3.37', '>= 3.37.1'
   # Run Selenium tests
   gem 'webdrivers', '~> 5.0', require: false
+  # Factory_bot
+  gem 'factory_bot_rails', '~> 6.2'
 end
 
 group :development do
