@@ -1,6 +1,7 @@
 import React from "react"
 
 const PostList = ({posts, activePost, updateActivePost}) => {
+  console.log('posts:', posts)
   return (
     <table className='table'>
       <thead>

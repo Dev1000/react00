@@ -1,22 +1,39 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
+import {gql} from "@apollo/client";
+import {useQuery} from '@apollo/client'
 
 import AddPost from "./Posts/AddPost"
 import PostList from "./Posts/PostList"
 import EditPost from "./Posts/EditPost"
 import {getCSRF} from "./Utils/SomeFuncs"
+import { withProvider } from "./Utils/GraphqlProvider"
+
+const postsQuery = gql`
+  query posts {
+    posts {
+      id
+      title
+    }
+  }
+`
 
 const Posts = () => {
   const [posts, setPosts] = useState([])
   const [activePost, setActivePost] = useState(null)
 
-  useEffect(() => {
+  const {data, loading, error} = useQuery(postsQuery)
+  if (loading) {
+    return <span>Loading...</span>
+  }
+
+  /*useEffect(() => {
     axios.get('/posts/index')
       .then(r => {
         console.log(r.data)
         setPosts(r.data)
       })
-  }, [])
+  }, [])*/
 
   const addPost = post => {
     console.log('addPost', post)
@@ -83,8 +100,19 @@ const Posts = () => {
           }
         </div>
       </div>
+      <div className='row'>
+        <div className='col-sm-12'>
+          {
+            data.posts.map(post => {
+              return (
+                <p key={post.id}>{post.title}</p>
+              )
+            })
+          }
+        </div>
+      </div>
     </React.Fragment>
   )
 }
 
-export default Posts
+export default withProvider(Posts)
