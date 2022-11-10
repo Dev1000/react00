@@ -1,6 +1,6 @@
 # README
 
-A very small and typical application for the management of Posts, using GraphQL to Rails servers and Apollo for the React client.
+A very small and typical application for the management of Posts, using GraphQL to Rails servers and Apollo for the React client. It has some test with RSpec and Capybara.
 
 Things you may want to cover:
 
@@ -11,11 +11,12 @@ Things you may want to cover:
 * Postgresql version 13
 
 * System dependencies
-- gem foreman
+gem foreman
 
 * Configuration
 
 * Database creation
+rails db:create db:migrate
 
 * Database initialization
 
@@ -24,12 +25,12 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-- bundle install
-- yarn install
-- rails db:create db:migrate
-- Use foreman to start the servers: start -f Procfile.dev
-- Visit http://localhost:3000
-- Sign up with an email (just for test) 
-- Login and create Posts
+bundle install
+yarn install
+rails db:create db:migrate
+Use foreman to start the servers: start -f Procfile.dev
+Visit http://localhost:3000
+Sign up with an email (just for test) 
+Login and create Posts
 
 * ...
