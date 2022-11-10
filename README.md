@@ -25,12 +25,18 @@ rails db:create db:migrate
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-bundle install
-yarn install
-rails db:create db:migrate
-Use foreman to start the servers: start -f Procfile.dev
-Visit http://localhost:3000
-Sign up with an email (just for test) 
-Login and create Posts
+1.-bundle install
+
+2.- yarn install
+
+3.- rails db:create db:migrate
+
+4.- Use foreman to start the servers: start -f Procfile.dev
+
+5.- Visit http://localhost:3000
+
+6.- Sign up with an email (just for test) 
+
+7.- Login and create Posts
 
 * ...
