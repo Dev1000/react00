@@ -1,6 +1,6 @@
 # README
 
-A very small and typical application for the management of Posts, using GraphQL to Rails servers and Apollo for the React client. It has some test with RSpec and Capybara.
+A very small and typical WIP application for the management of Posts, using GraphQL to Rails servers and Apollo for the React client. It has some test with RSpec and Capybara.
 
 Things you may want to cover:
 
@@ -16,7 +16,7 @@ gem foreman
 * Configuration
 
 * Database creation
-* 
+
 rails db:create db:migrate
 
 * Database initialization
