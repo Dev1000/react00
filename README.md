@@ -16,6 +16,7 @@ gem foreman
 * Configuration
 
 * Database creation
+* 
 rails db:create db:migrate
 
 * Database initialization
@@ -25,6 +26,7 @@ rails db:create db:migrate
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+
 1.-bundle install
 
 2.- yarn install
